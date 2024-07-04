@@ -28,7 +28,7 @@ export default function index() {
 
 
   return (
-    <motion.div variants={menuSlide} initial="initial" animate="enter" exit="exit" className="h-screen bg-purple-950 fixed right-0 top-0" style={{ color: 'white'}}>
+    <motion.div variants={menuSlide} initial="initial" animate="enter" exit="exit" className="h-screen bg-purple-950 fixed right-0 top-0 z-3" style={{ color: 'white'}}>
        <div className="box-border h-full p-[100px] flex flex-col justify-center">
             <div className="flex flex-col text-[56px]">
                     <div className="border-b border-b-zinc-400 capitalize text-[11px] mb-10">
