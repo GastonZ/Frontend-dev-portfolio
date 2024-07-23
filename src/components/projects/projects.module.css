@@ -1,0 +1,28 @@
+/* projects.module.css */
+
+.projectsContainer {
+    width: 200vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 20px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 100vh;
+
+  }
+  
+  .projectImages {
+    display: flex;
+    position: relative;
+    gap: 20px;
+    transition: 500ms ease;
+  }
+  
+  .projectImages img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  

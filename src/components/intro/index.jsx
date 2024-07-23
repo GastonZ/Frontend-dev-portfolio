@@ -5,7 +5,7 @@ import { BackgroundCircles } from '../design';
 export default function Intro() {
 
     return (
-        <div className='relative'>
+        <div className='relative bg-n-7'>
             <div className='flex justify-center items-center h-screen flex-col'>
                 <div className='z-2 text-center'>
                     <h1 className='text-[3rem] md:text-[5rem] first-letter:text-purple-600'>Gaston Zappulla</h1>
