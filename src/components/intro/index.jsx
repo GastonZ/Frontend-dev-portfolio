@@ -13,6 +13,11 @@ export default function Intro() {
                 </div>
                 <BackgroundCircles />
             </div>
+            <div className='h-[30vh] flex justify-center items-end'>
+                <h1 className='text-[60px]'>
+                    Projects
+                </h1>
+            </div>
         </div>
     )
 }

@@ -1,41 +1,86 @@
-import { motion, useTransform, useScroll } from "framer-motion";
-import { useRef } from "react";
-import { tinky_laptop, facto_laptop, motorx_laptop, foco_laptop, mindy_laptop } from "../../assets";
+import { motion, useTransform, useScroll, AnimatePresence } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+import { tinky_laptop, facto_laptop, motorx_laptop, foco_laptop, mindy_laptop, projectDone, projectProgress, mytinerary_laptop, agencia_laptop } from "../../assets";
 
 const cards = [
-  { url: tinky_laptop, title: "Tinky", id: 1 },
-  { url: facto_laptop, title: "Facto", id: 2 },
-  { url: "https://s1.zerochan.net/Rias.Gremory.600.4086864.jpg", title: "AgencIA", id: 3 },
-  { url: motorx_laptop, title: "Motor X", id: 4 },
-  { url: foco_laptop, title: "Foco", id: 5 },
-  { url: mindy_laptop, title: "Mindy", id: 6 },
-  { url: "https://s1.zerochan.net/Rias.Gremory.600.4086864.jpg", title: "MyTinerary", id: 7 },
+  { thopic : 'Services',url: tinky_laptop, title: "Tinky", id: 1, done: true, link: 'https://tinky.com.ar/', canVisit: true },
+  { thopic : 'Design',url: facto_laptop, title: "Facto Studio", id: 2, done: false, link: 'https://facto-studio.vercel.app/', canVisit: true },
+  { thopic : 'AI',url: agencia_laptop, title: "AgencIA", id: 3, done: false, link: '-', canVisit: false },
+  { thopic : 'Design - Shop',url: motorx_laptop, title: "Motor X", id: 4, done: true, link: 'https://motorx.vercel.app/', canVisit: true },
+  { thopic : 'Landing - Software',url: foco_laptop, title: "Foco", id: 5, done: true, link: 'https://foco-website.vercel.app/', canVisit: true },
+  { thopic : 'Pets - Shop',url: mindy_laptop, title: "Mindy", id: 6, done: true, link: 'https://petshop-mindy.netlify.app/', canVisit: true },
+  { thopic : 'Design - Travel',url: mytinerary_laptop, title: "MyTinerary", id: 7, done: true, link: 'https://mytinerary-netrunners.vercel.app/', canVisit: true },
 ];
 
-const Card = ({ card }) => (
-  <div key={card.id} className="group relative h-[200px] w-[450px] md:h-[450px] md:w-[700px] lg:h-[450px] lg:w-[700px] overflow-hidden">
-    <div
-      style={{ backgroundImage: `url(${card.url})`, backgroundSize: "cover", backgroundPosition: "center" }}
-      className="absolute inset-0 z-0 transition-transform duration-300 group-hover:scale-110"
-    ></div>
-    <div className="absolute bottom-0 left z-10 grid place-content-start group-hover:bg-opacity-50 group-hover:bg-n-8 w-full transition-all">
-      <p className="from-white/20 to-white/0 text-6xl font-black text-white group-hover:-translate-y-3 transition-all m-4">
-        {card.title}
-      </p>
-    </div>
-  </div>
-);
-
-const SpaceShip = ({ targetRef }) => {
-  const { scrollYProgress } = useScroll({ target: targetRef });
-
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "2000%"]);
-  const y = useTransform(scrollYProgress, [0, 0.5, 0.8, 1], ["0%", "1000%", "-1000%", "500%"]);
+const Card = ({ card }) => {
+  const [isHover, setHover] = useState(false);
 
   return (
-    <motion.div style={{ x, y }} className="absolute top-1/2 left-0 z-[999] -translate-y-1/2">
-      Lanzo
-    </motion.div>
+    <div key={card.id} className="hover:-translate-y-3 transition-all relative h-[495px] w-[700px] bg-n-14 z-[999999999]">
+      {
+        card.done ?
+          <div>
+            {
+              isHover && (
+                <AnimatePresence>
+                  <motion.span
+                    className="absolute right-[50px]"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                  >
+                    Project completed
+                  </motion.span>
+                </AnimatePresence>
+              )
+            }
+            <img
+              onMouseEnter={() => setHover(true)}
+              onMouseLeave={() => setHover(false)}
+              className="absolute h-24 -right-[50px] -top-[45px]"
+              src={projectDone}
+            />
+          </div>
+          :
+          <div>
+            {
+              isHover && (
+                <AnimatePresence>
+                  <motion.span
+                    className="absolute right-[50px]"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                  >
+                    Project in progress
+                  </motion.span>
+                </AnimatePresence>
+              )
+            }
+            <img
+              onMouseEnter={() => setHover(true)}
+              onMouseLeave={() => setHover(false)}
+              className="absolute h-24 -right-[50px] -top-[45px]"
+              src={projectProgress}
+            />
+          </div>
+      }
+      <div>
+        <img className="h-[400px] w-full object-cover" src={card.url} alt="Portfolio project image" />
+      </div>
+      <div className="flex justify-between relative">
+        <div className="flex flex-col p-4">
+          <h2 className="text-sm text-color-text-light">{card.thopic}</h2>
+          <h1 className="text-5xl">
+            {card.title}
+          </h1>
+        </div>
+        <div className="flex flex-col p-4 text-end justify-end">
+          <span className="text-color-text-light underline underline-offset-2 cursor-pointer hover:text-gray-100 transition-all">{card.canVisit ? <a target="_blank" href={card.link}>Visit site</a> : 'Available soon'}  </span>
+          <span className="text-color-text-light underline underline-offset-2 cursor-pointer hover:text-gray-100 transition-all">About</span>
+        </div>
+      </div>
+    </div>
   );
 };
 
@@ -46,15 +91,13 @@ const Projects = () => {
   const x = useTransform(scrollYProgress, [0, 1], ["1%", "-85%"]);
 
   return (
-    <section ref={targetRef} className="relative h-[200vh] bg-n-7">
+    <section ref={targetRef} className="relative h-[200vh] bg-n-7 ">
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
-        {/* <SpaceShip targetRef={targetRef} /> */}
-        <motion.div style={{ x }} className="flex gap-6">
+        <motion.div style={{ x }} className="flex gap-16">
           {cards.map((card) => (
-            <Card card={card} key={card.id} />
+            <Card card={card} key={card.id} xValue={x}/>
           ))}
         </motion.div>
-
       </div>
     </section>
   );

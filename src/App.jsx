@@ -3,8 +3,12 @@ import Header from './components/header'
 import Intro from './components/intro'
 import Projects from './components/projects'
 import Experience from './components/experience'
+import Aos from 'aos'
+import 'aos/dist/aos.css';
 
 function App() {
+
+  Aos.init();
 
   useEffect(() => {
     (
