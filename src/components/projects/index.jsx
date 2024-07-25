@@ -16,7 +16,7 @@ const Card = ({ card }) => {
   const [isHover, setHover] = useState(false);
 
   return (
-    <div key={card.id} className="hover:-translate-y-3 transition-all relative h-[495px] w-[700px] bg-n-14 z-[999999999]">
+    <div data-aos="fade-up-right" id="#work" key={card.id} className="hover:-translate-y-3 transition-all relative h-[495px] w-[700px] bg-n-14 z-[999999999]">
       {
         card.done ?
           <div>
@@ -91,7 +91,7 @@ const Projects = () => {
   const x = useTransform(scrollYProgress, [0, 1], ["1%", "-85%"]);
 
   return (
-    <section ref={targetRef} className="relative h-[200vh] bg-n-7 ">
+    <section id="work" ref={targetRef} className="relative h-[200vh] bg-n-7 ">
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
         <motion.div style={{ x }} className="flex gap-16">
           {cards.map((card) => (

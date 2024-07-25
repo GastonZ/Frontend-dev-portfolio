@@ -5,6 +5,7 @@ import Projects from './components/projects'
 import Experience from './components/experience'
 import Aos from 'aos'
 import 'aos/dist/aos.css';
+import Contact from './components/contact/Contact'
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
       <Intro />
       <Projects />
       <Experience />
+{/*       <Contact /> */}
     </>
   )
 }

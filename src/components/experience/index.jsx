@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 const Experience = () => {
   return (
-    <div className='min-h-screen bg-n-7'>
+    <div id='#experience' className='min-h-screen bg-n-7 pt-20'>
       <div className='flex justify-center items-center pb-20'>
         <h1 className='text-[60px]'>
           My Journey
@@ -23,7 +23,7 @@ const Experience = () => {
           </div>
           <ScrollParallax>
             <div data-aos="fade-right" className='flex justify-end'>
-              <motion.img initial={{y: 0}} animate={{ y: [0, -10, 0]}} transition={{ duration: 3, repeat: Infinity, repeatType: 'loop'}} className='h-40 w-40 rounded-full' src={cyber_one} alt="" />
+              <motion.img initial={{y: 0}} animate={{ y: [0, -10, 0]}} transition={{ duration: 3, repeat: Infinity, repeatType: 'loop'}} className='h-40 w-40 rounded-full hidden lg:block' src={cyber_one} alt="" />
             </div>
           </ScrollParallax>
         </div>
@@ -37,7 +37,7 @@ const Experience = () => {
           </div>
           <ScrollParallax>
             <div data-aos="fade-left" className='flex'>
-              <motion.img initial={{y: 0}} animate={{ y: [0, -10, 0]}} transition={{ duration: 3, repeat: Infinity, repeatType: 'loop'}} className='h-40 w-40 rounded-full' src={cyber_two} alt="" />
+              <motion.img initial={{y: 0}} animate={{ y: [0, -10, 0]}} transition={{ duration: 3, repeat: Infinity, repeatType: 'loop'}} className='h-40 w-40 rounded-full hidden lg:block' src={cyber_two} alt="" />
             </div>
           </ScrollParallax>
         </div>
@@ -51,7 +51,7 @@ const Experience = () => {
           </div>
           <ScrollParallax>
             <div data-aos="fade-right" className='flex justify-end'>
-              <motion.img initial={{y: 0}} animate={{ y: [0, -10, 0]}} transition={{ duration: 3, repeat: Infinity, repeatType: 'loop'}} className='h-40 w-40 rounded-full' src={cyber_three} alt="" />
+              <motion.img initial={{y: 0}} animate={{ y: [0, -10, 0]}} transition={{ duration: 3, repeat: Infinity, repeatType: 'loop'}} className='h-40 w-40 rounded-full hidden lg:block' src={cyber_three} alt="" />
             </div>
           </ScrollParallax>
         </div>
@@ -65,7 +65,7 @@ const Experience = () => {
           </div>
         <ScrollParallax>
           <div data-aos="fade-left" className='flex justify-between grow'>
-            <motion.img initial={{y: 0}} animate={{ y: [0, -10, 0]}} transition={{ duration: 3, repeat: Infinity, repeatType: 'loop'}} className='h-40 w-40 rounded-full' src={cyber_four} alt="" />
+            <motion.img initial={{y: 0}} animate={{ y: [0, -10, 0]}} transition={{ duration: 3, repeat: Infinity, repeatType: 'loop'}} className='h-40 w-40 rounded-full hidden lg:block' src={cyber_four} alt="" />
           </div>
         </ScrollParallax>
         </div>
