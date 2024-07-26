@@ -1,5 +1,6 @@
 import tinky_laptop from './web/laptop_tinky.png';
 import punk1 from './cyberpunk/punk1.png';
+import punk1_v2 from './cyberpunk/punk1_v2.png';
 import facto_laptop from './web/laptop_facto.jpg';
 import motorx_laptop from './web/laptop_motor.png';
 import foco_laptop from './web/laptop_foco.png';
@@ -24,6 +25,7 @@ export {
     mytinerary_laptop,
     agencia_laptop,
     punk1,
+    punk1_v2,
     projectDone,
     projectProgress,
     cyber_one,
