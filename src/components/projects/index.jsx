@@ -78,7 +78,7 @@ const Card = ({ card }) => {
         </div>
         <div className="flex flex-col p-4 text-end justify-end">
           <span className="text-color-text-light underline underline-offset-2 cursor-pointer hover:text-gray-100 transition-all">{card.canVisit ? <a target="_blank" href={card.link}>Visit site</a> : 'Available soon'}  </span>
-          <span className="text-color-text-light underline underline-offset-2 cursor-pointer hover:text-gray-100 transition-all">About</span>
+          {/* <span className="text-color-text-light underline underline-offset-2 cursor-pointer hover:text-gray-100 transition-all">About</span> */}
         </div>
       </div>
     </div>
