@@ -58,6 +58,7 @@ const Card = ({ card }) => {
               )
             }
             <img
+              loading="lazy"
               onMouseEnter={() => setHover(true)}
               onMouseLeave={() => setHover(false)}
               className="absolute h-24 -right-[50px] -top-[45px]"
