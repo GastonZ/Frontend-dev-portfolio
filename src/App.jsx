@@ -6,6 +6,7 @@ import Experience from './components/experience'
 import Aos from 'aos'
 import 'aos/dist/aos.css';
 import Contact from './components/contact/Contact'
+import Footer from './components/footer/Footer'
 
 function App() {
 
@@ -26,7 +27,8 @@ function App() {
       <Intro />
       <Projects />
       <Experience />
-{/*       <Contact /> */}
+      <Contact />
+      <Footer />
     </>
   )
 }
