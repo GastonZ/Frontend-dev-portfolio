@@ -35,6 +35,7 @@ const Card = ({ card }) => {
               )
             }
             <img
+              alt="Project status icon"
               onMouseEnter={() => setHover(true)}
               onMouseLeave={() => setHover(false)}
               className="absolute h-24 -right-[50px] -top-[45px]"
@@ -58,6 +59,7 @@ const Card = ({ card }) => {
               )
             }
             <img
+              alt="Project status icon"
               loading="lazy"
               onMouseEnter={() => setHover(true)}
               onMouseLeave={() => setHover(false)}

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { MouseParallax } from "react-just-parallax";
 import { motion } from "framer-motion";
-import { punk1 } from '../../assets/index';
+import { punk1, punk1_v2 } from '../../assets/index';
 
 const Rings = ({ parallaxRef }) => {
     return (
@@ -23,7 +23,7 @@ const Rings = ({ parallaxRef }) => {
                 transition={{ duration: 60, repeat: Infinity }}
                 className="brightness-150 absolute top-[430px] left-[430px] w-[25.125rem] aspect-square border border-color-1/90 rounded-full -translate-x-1/2 -translate-y-1/2" />
             <MouseParallax strength={0.02} parallaxContainerRef={parallaxRef}>
-                <motion.img src={punk1}
+                <motion.img src={punk1_v2}
                     alt="Portfolio Icon"
                     animate={{ scale: [1.0, 1.2, 1.0], rotate: [0, 180, 0] }}
                     transition={{ duration: 60, repeat: Infinity }}
