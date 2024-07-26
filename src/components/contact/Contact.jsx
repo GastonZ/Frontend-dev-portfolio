@@ -100,7 +100,7 @@ const Contact = () => {
               :
               <div className='flex flex-col items-center gap-4'>
                 <button className="btn" type="submit">
-                  <strong>SEND</strong>
+                  <strong className='strong-contact'>SEND</strong>
                   <div id="container-stars">
                     <div id="stars"></div>
                   </div>
