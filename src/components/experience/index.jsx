@@ -5,14 +5,14 @@ import { motion } from 'framer-motion';
 
 const Experience = () => {
   return (
-    <div id='#experience' className='min-h-screen bg-n-7 pt-20'>
+    <div id='experience' className='min-h-screen bg-n-7 pt-20'>
       <div className='flex justify-center items-center pb-20'>
         <h1 className='text-[60px] text-center'>
           My Journey
         </h1>
       </div>
 
-      <div id='experience' className='flex px-4 md:px-10 flex-col pb-40 w-full gap-40'>
+      <div className='flex px-4 md:px-10 flex-col pb-40 w-full gap-40'>
         <div className='flex justify-between grow'>
           <div data-aos="fade-right" className='flex items-start flex-col'>
             <h3 className='text-5xl'>2021</h3>

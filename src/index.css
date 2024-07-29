@@ -13,8 +13,11 @@
   --font-code: "Source Code Pro", monospace;
   --font-grotesk: "Space Grotesk", sans-serif;
   color-scheme: dark;
-  overflow-y: hidden;
   overflow-x: hidden;
+}
+
+.desktop_css {
+  overflow-y: hidden;
 }
 
 * {
