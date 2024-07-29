@@ -1,6 +1,7 @@
 import { motion, useTransform, useScroll, AnimatePresence } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { tinky_laptop, facto_laptop, motorx_laptop, foco_laptop, mindy_laptop, projectDone, projectProgress, mytinerary_laptop, agencia_laptop } from "../../assets";
+import { isTouchableDevice } from "../../utils/helper";
 
 const cards = [
   { thopic : 'Services',url: tinky_laptop, title: "Tinky", id: 1, done: true, link: 'https://tinky.com.ar/', canVisit: true },
@@ -16,7 +17,7 @@ const Card = ({ card }) => {
   const [isHover, setHover] = useState(false);
 
   return (
-    <div data-aos="fade-up-right" id="#work" key={card.id} className="hover:-translate-y-3 transition-all relative h-[495px] w-[700px] bg-n-14 z-[999999999]">
+    <div id="#work" key={card.id} className="hover:-translate-y-3 transition-all relative h-[495px] w-[700px] bg-n-14 z-[999999999]">
       {
         card.done ?
           <div>
@@ -87,13 +88,42 @@ const Card = ({ card }) => {
   );
 };
 
+const CellPhoneCard = ({ card }) => {
+  const [isHover, setHover] = useState(false);
+  
+  return (
+    <div className="w-full px-4 relative">
+      <img className="w-full object-cover" src={card.url} alt="" />
+      <div className="flex flex-col absolute top-0 p-4 bg-n-7 w-full bg-opacity-30">
+        <span className="text-xs ">
+          {card.thopic}
+        </span>
+      <h2 className="text-3xl">
+        {card.title}
+      </h2>
+      </div>
+      {
+        card.canVisit ? <a target="_blank" className="absolute bottom-0 right-10 text-color-1 brightness-125" href={card.link}>Visit</a> : <p className="absolute bottom-0 right-10 text-color-1 brightness-125">Developing</p>
+      }
+    </div>
+  );
+  
+}
+
 const Projects = () => {
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({ target: targetRef });
-
+  let isCellphone = isTouchableDevice();
   const x = useTransform(scrollYProgress, [0, 1], ["1%", "-85%"]);
 
   return (
+    isCellphone ?
+    <section id="work" className="min-h-screen pt-10 bg-n-7 flex flex-wrap justify-center items-center gap-4">
+          {cards.map((card) => (
+            <CellPhoneCard card={card} key={card.id} xValue={x}/>
+          ))}
+    </section>
+    :
     <section id="work" ref={targetRef} className="relative h-[200vh] bg-n-7 ">
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
         <motion.div style={{ x }} className="flex gap-16">

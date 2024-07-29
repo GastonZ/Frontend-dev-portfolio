@@ -1,8 +1,11 @@
 import { useEffect, useState } from 'react';
 import { BackgroundCircles } from '../design';
+import { isTouchableDevice } from '../../utils/helper'
 
 
 export default function Intro() {
+
+    let isCellphone = isTouchableDevice();
 
     return (
         <div id='home' className='relative bg-n-7'>
@@ -11,7 +14,12 @@ export default function Intro() {
                     <h1 className='text-[3rem] md:text-[5rem] first-letter:text-purple-600'>Gaston Zappulla</h1>
                     <h2 className='text-[2rem] md:text-[3rem] first-letter:text-purple-500'>Front End Developer</h2>
                 </div>
-                <BackgroundCircles />
+                {
+                    !isCellphone ?
+                    <BackgroundCircles />
+                    :
+                    <></>
+                }
             </div>
             <div className='h-[30vh] flex justify-center items-end'>
                 <h1 className='text-[60px]'>

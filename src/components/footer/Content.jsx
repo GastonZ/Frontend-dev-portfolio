@@ -33,8 +33,8 @@ const Nav = () => {
                 <h3 className='mb-2 uppercase text-color-1'>Navigation</h3>
                 <a className='text-white' href='#home'>Home</a>
                 <a className='text-white' href='#projects'>Projects</a>
-                <a className='text-white' href='#experience'>Our Mission</a>
-                <a className='text-white' href='#contact'>Contact Us</a>
+                <a className='text-white' href='#experience'>About</a>
+                <a className='text-white' href='#contact'>Contact me</a>
             </div>
             <div className='flex flex-col gap-2'>
                 <h3 className='mb-2 uppercase text-color-1'>Socials</h3>

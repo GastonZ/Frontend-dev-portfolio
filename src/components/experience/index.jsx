@@ -7,12 +7,12 @@ const Experience = () => {
   return (
     <div id='#experience' className='min-h-screen bg-n-7 pt-20'>
       <div className='flex justify-center items-center pb-20'>
-        <h1 className='text-[60px]'>
+        <h1 className='text-[60px] text-center'>
           My Journey
         </h1>
       </div>
 
-      <div id='experience' className='flex flex-col pb-40 px-10 w-full gap-40'>
+      <div id='experience' className='flex px-4 md:px-10 flex-col pb-40 w-full gap-40'>
         <div className='flex justify-between grow'>
           <div data-aos="fade-right" className='flex items-start flex-col'>
             <h3 className='text-5xl'>2021</h3>
@@ -30,7 +30,7 @@ const Experience = () => {
         <div className='flex-row-reverse justify-between grow'>
           <div data-aos="fade-left" className='flex items-end flex-col'>
             <h3 className='text-5xl'>2022</h3>
-            <h4 className='text-3xl pt-1 pb-5 text-color-1'>Building Strong Foundations</h4>
+            <h4 className='text-3xl pt-1 pb-5 text-color-1 text-right'>Building Strong Foundations</h4>
             <p className='text-right md:w-[700px]'>
               During 2022, I worked as a freelance developer, creating projects for various clients. This year was crucial for honing my skills and gaining practical experience in frontend development.
             </p>
@@ -58,7 +58,7 @@ const Experience = () => {
         <div className='flex flex-col justify-between grow'>
           <div data-aos="fade-left" className='flex items-end flex-col'>
             <h3 className='text-5xl'>2024</h3>
-            <h4 className='text-3xl pt-1 pb-5 text-color-1'>Venturing into New Horizons</h4>
+            <h4 className='text-3xl pt-1 pb-5 text-color-1 text-right'>Venturing into New Horizons</h4>
             <p className='text-right md:w-[700px]'>
               In 2024, I returned to freelancing and founded a software development company. Currently, I am working on AI-related projects, exploring new technologies, and expanding my horizons.
             </p>
