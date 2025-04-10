@@ -53,17 +53,17 @@ const Experience = () => {
           {isMobile ? <>
             <div className='flex items-end flex-col'>
               <h3 className='text-5xl'>2022</h3>
-              <h4 className='text-3xl pt-1 pb-5 text-color-1 text-right'>Building Strong Foundations</h4>
+              <h4 className='text-3xl pt-1 pb-5 text-color-1 text-right'>My First Professional Job</h4>
               <p className='text-right md:w-[700px]'>
-                During 2022, I worked as a freelance developer, creating projects for various clients. This year was crucial for honing my skills and gaining practical experience in frontend development.
+              In 2022, I landed my first job as a frontend developer at <strong className='text-color-7'><a target='_blank' href="https://totalcoin.com/">Totalcoin.</a> </strong>  For a year, I applied my knowledge in a professional setting and significantly grew as a developer while still working in freelance jobs and non-stop learning.
               </p>
             </div>
           </> : <>
             <div data-aos="fade-left" className='flex items-end flex-col'>
               <h3 className='text-5xl'>2022</h3>
-              <h4 className='text-3xl pt-1 pb-5 text-color-1 text-right'>Building Strong Foundations</h4>
+              <h4 className='text-3xl pt-1 pb-5 text-color-1 text-right'>My First Professional Job</h4>
               <p className='text-right md:w-[700px]'>
-                During 2022, I worked as a freelance developer, creating projects for various clients. This year was crucial for honing my skills and gaining practical experience in frontend development.
+              In 2022, I landed my first job as a frontend developer at <strong className='text-color-7'><a target='_blank' href="https://totalcoin.com/">Totalcoin.</a> </strong>  For a year, I applied my knowledge in a professional setting and significantly grew as a developer while still working in freelance jobs and non-stop learning.
               </p>
             </div>
           </>}
@@ -84,18 +84,16 @@ const Experience = () => {
           {isMobile ? <>
             <div className='flex items-start flex-col'>
               <h3 className='text-5xl'>2023</h3>
-              <h4 className='text-3xl pt-1 pb-5 text-color-1'>My First Professional Job</h4>
+              <h4 className='text-3xl pt-1 pb-5 text-color-1'>Venturing into New Horizons</h4>
               <p className='text-left md:w-[700px]'>
-                In 2023, I landed my first job as a frontend developer at <strong className='text-color-7'><a target='_blank' href="https://totalcoin.com/">Totalcoin.</a> </strong>  For a year, I applied my knowledge in a professional setting and significantly grew as a developer.
-              </p>
+              I decided to dedicate myself entirely to <strong className='text-color-7'><a href="https://www.linkedin.com/company/la-agencia-ia/">The AgencIA</a> </strong>  key project, which is still under development. It's a massive project dedicated to promoting companies and businesses using AI and social media.              </p>
             </div>
           </> : <>
             <div data-aos="fade-right" className='flex items-start flex-col'>
               <h3 className='text-5xl'>2023</h3>
-              <h4 className='text-3xl pt-1 pb-5 text-color-1'>My First Professional Job</h4>
+              <h4 className='text-3xl pt-1 pb-5 text-color-1'>Venturing into New Horizons</h4>
               <p className='text-left md:w-[700px]'>
-                In 2023, I landed my first job as a frontend developer at <strong className='text-color-7'><a target='_blank' href="https://totalcoin.com/">Totalcoin.</a> </strong>  For a year, I applied my knowledge in a professional setting and significantly grew as a developer.
-              </p>
+              I decided to dedicate myself entirely to <strong className='text-color-7'><a href="https://www.linkedin.com/company/la-agencia-ia/">The AgencIA</a> </strong> key project, which is still under development. It's a massive project dedicated to promoting companies and businesses using AI and social media.              </p>
             </div>
           </>}
           <ScrollParallax>
@@ -115,17 +113,17 @@ const Experience = () => {
           {isMobile ? <>
             <div className='flex items-end flex-col'>
               <h3 className='text-5xl'>2024</h3>
-              <h4 className='text-3xl pt-1 pb-5 text-color-1 text-right'>Venturing into New Horizons</h4>
+              <h4 className='text-3xl pt-1 pb-5 text-color-1 text-right'>Growing</h4>
               <p className='text-right md:w-[700px]'>
-                In 2024, I returned to freelancing and founded a software development company. Currently, I am working on AI-related projects, exploring new technologies, and expanding my horizons.
+                In 2024, A partner and I founded a software development company. Currently, I am working on AI-related projects, exploring new technologies, and expanding my horizons.
               </p>
             </div>
           </> : <>
             <div data-aos="fade-left" className='flex items-end flex-col'>
               <h3 className='text-5xl'>2024</h3>
-              <h4 className='text-3xl pt-1 pb-5 text-color-1 text-right'>Venturing into New Horizons</h4>
+              <h4 className='text-3xl pt-1 pb-5 text-color-1 text-right'>Growing</h4>
               <p className='text-right md:w-[700px]'>
-                In 2024, I returned to freelancing and founded a software development company. Currently, I am working on AI-related projects, exploring new technologies, and expanding my horizons.
+                In 2024, A partner and I founded a software development company. Currently, I am working on AI-related projects, exploring new technologies, and expanding my horizons.
               </p>
             </div>
           </>}

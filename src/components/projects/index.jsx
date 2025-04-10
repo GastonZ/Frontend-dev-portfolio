@@ -4,7 +4,7 @@ import { tinky_laptop, facto_laptop, motorx_laptop, foco_laptop, mindy_laptop, p
 import { isTouchableDevice } from "../../utils/helper";
 
 const cards = [
-  { thopic : 'Services',url: tinky_laptop, title: "Tinky", id: 1, done: true, link: 'https://tinky.com.ar/', canVisit: true },
+  { thopic : 'Connection',url: tinky_laptop, title: "Migracion y cultura", id: 1, done: true, link: 'https://migracionycultura.org/', canVisit: true },
   { thopic : 'Design',url: facto_laptop, title: "Facto Studio", id: 2, done: false, link: 'https://facto-studio.vercel.app/', canVisit: true },
   { thopic : 'AI',url: agencia_laptop, title: "AgencIA", id: 3, done: false, link: '-', canVisit: false },
   { thopic : 'Design - Shop',url: motorx_laptop, title: "Motor X", id: 4, done: true, link: 'https://motorx.vercel.app/', canVisit: true },
