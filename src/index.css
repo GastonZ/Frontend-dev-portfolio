@@ -14,6 +14,14 @@
   --font-grotesk: "Space Grotesk", sans-serif;
   color-scheme: dark;
   overflow-x: hidden;
+
+  /* Space theme accent colors */
+  --accent-purple: #AC6AFF;
+  --accent-pink: #FF98E2;
+  --accent-blue: #858DFF;
+  --bg-deep: #0E0C15;
+  --bg-main: #15131D;
+  --bg-card: rgba(12, 8, 22, 0.75);
 }
 
 .desktop_css {
@@ -226,5 +234,70 @@ html, body {
   100% {
     transform: scale(0.75);
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+/* ====================== */
+/* Space theme enhancements */
+/* ====================== */
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0E0C15;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(172, 106, 255, 0.35);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(172, 106, 255, 0.6);
+}
+
+/* Text selection */
+::selection {
+  background: rgba(172, 106, 255, 0.3);
+  color: #fff;
+}
+
+/* Mobile timeline: shift to single column */
+@media (max-width: 768px) {
+  .timeline-item-left,
+  .timeline-item-right {
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+}
+
+/* Glassmorphism hover glow */
+.glass-card:hover {
+  border-color: rgba(172, 106, 255, 0.3) !important;
+  box-shadow: 0 0 40px rgba(172, 106, 255, 0.1), 0 20px 60px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Nebula animated background */
+@keyframes nebulaPulse {
+  0%, 100% {
+    opacity: 0.04;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.08;
+    transform: scale(1.05);
+  }
+}
+
+/* Floating glow orb */
+@keyframes floatGlow {
+  0%, 100% {
+    transform: translateY(0px);
+    filter: blur(20px);
+  }
+  50% {
+    transform: translateY(-12px);
+    filter: blur(24px);
   }
 }
